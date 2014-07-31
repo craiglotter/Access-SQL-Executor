@@ -1,0 +1,233 @@
+<HTML><HEAD><TITLE>SQL Introduction</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<LINK 
+href="Images/stdtheme.css" type=text/css rel=stylesheet>
+
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#808080>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=234><A href="http://www.w3schools.com/"><IMG 
+      alt=W3Schools src="Images/w3default80.jpg" border=0></A> </TD>
+    <TH class=right vAlign=center width=470>
+      <CENTER><BR></CENTER></TH>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=3 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=content vAlign=top width=137><BR><B>SQL Basic</B> <BR>
+	<a class="left" style="color: #000000; background-color: transparent" target="_top" href="SQL_Intro.htm">SQL 
+      Intro</a><BR><b><a class="left" target="_top" href="SQL_Select.htm">SQL 
+      SELECT</a></b><BR><a class="left" target="_top" href="SQL_Where.htm">SQL 
+      WHERE</a><BR><a class="left" target="_top" href="SQL_Insert.htm">SQL 
+      INSERT</a><BR><a class="left" target="_top" href="SQL_Update.htm">SQL 
+      UPDATE</a><BR><a class="left" target="_top" href="SQL_Delete.htm">SQL 
+      DELETE</a><BR>
+	<a class="left" target="_top" href="SQL_Select_Into.htm">SQL 
+      SELECT INTO</a><BR><BR>&nbsp;</TD>
+    <TD vAlign=top width=490>
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" bgColor=#ffffff 
+        border=1><TBODY>
+        <TR>
+          <TD>
+            <H1>SQL The SELECT Statement </H1><a href="SQL_Intro.htm"><IMG height=20 
+            alt=previous src="Images/btn_previous.gif" width=100 
+            border=0></a> <a href="SQL_Where.htm"><IMG height=20 
+            alt=next src="Images/btn_next.gif" width=100 border=0></a> 
+            <HR>
+
+            <H2>The SELECT Statement</H2>
+            <P>The SELECT statement is used to select data from a table. The 
+            tabular result is stored in a result table (called the 
+            result-set).</P>
+            <H3>Syntax</H3>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table1">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT column_name(s)
+FROM table_name</PRE></TD></TR></TBODY></TABLE><BR>
+            <HR>
+
+            <H2>Select Some Columns</H2>
+            <P>To select the columns named "LastName" and "FirstName", use a 
+            SELECT statement like this:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table2">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT LastName,FirstName FROM Persons</PRE></TD></TR></TBODY></TABLE>
+            <P><B>"Persons" table</B></P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table3">
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH>
+                <TH align=left>Address</TH>
+                <TH align=left>City</TH></TR>
+              <TR>
+                <TD>Hansen</TD>
+                <TD>Ola</TD>
+                <TD>Timoteivn 10</TD>
+                <TD>Sandnes</TD></TR>
+              <TR>
+                <TD>Svendson</TD>
+                <TD>Tove</TD>
+                <TD>Borgvn 23</TD>
+                <TD>Sandnes</TD></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD>
+                <TD>Storgt 20</TD>
+                <TD>Stavanger</TD></TR></TBODY></TABLE>
+            <P><B>Result</B></P>
+            <TABLE class=ex cellSpacing=0 width="50%" border=1 id="table4">
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH></TR>
+              <TR>
+                <TD>Hansen</TD>
+                <TD>Ola</TD></TR>
+              <TR>
+                <TD>Svendson</TD>
+                <TD>Tove</TD></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD></TR></TBODY></TABLE><BR>
+            <HR>
+
+            <H2>Select All Columns</H2>
+            <P>To select all columns from the "Persons" table, use a * symbol 
+            instead of column names, like this:&nbsp;</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table5">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT * FROM Persons</PRE></TD></TR></TBODY></TABLE>
+            <P><B>Result</B></P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table6">
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH>
+                <TH align=left>Address</TH>
+                <TH align=left>City</TH></TR>
+              <TR>
+                <TD>Hansen</TD>
+                <TD>Ola</TD>
+                <TD>Timoteivn 10</TD>
+                <TD>Sandnes</TD></TR>
+              <TR>
+                <TD>Svendson</TD>
+                <TD>Tove</TD>
+                <TD>Borgvn 23</TD>
+                <TD>Sandnes</TD></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD>
+                <TD>Storgt 20</TD>
+                <TD>Stavanger</TD></TR></TBODY></TABLE><BR>
+            <HR>
+
+            <H2>The Result Set</H2>
+            <P>The result from a SQL query is stored in a result-set. Most 
+            database software systems allow navigation of the result set with 
+            programming functions, like: Move-To-First-Record, 
+            Get-Record-Content, Move-To-Next-Record, etc.</P>
+            <P>Programming functions like these are not a part of this tutorial. 
+            To learn about accessing data with function calls, please visit our 
+            <A href="http://www.w3schools.com/ado/default.asp">ADO tutorial</A>. 
+            </P>
+            <HR>
+
+            <H2>Semicolon after SQL Statements?</H2>
+            <P>Semicolon is the standard way to separate each SQL statement in 
+            database systems that allow more than one SQL statement to be 
+            executed in the same call to the server.</P>
+            <P>Some SQL tutorials end each SQL statement with a semicolon. Is 
+            this necessary? We are using MS Access and SQL Server 2000 and we do 
+            not have to put a semicolon after each SQL statement, but some 
+            database programs force you to use it.</P>
+            <HR>
+
+            <H2>The SELECT DISTINCT Statement</H2>
+            <P>The DISTINCT keyword is used to return only distinct (different) 
+            values.</P>
+            <P>The SELECT statement returns information from table columns. But 
+            what if we only want to select distinct elements?</P>
+            <P>With SQL, all we need to do is to add a DISTINCT keyword to the 
+            SELECT statement:</P>
+            <H3>Syntax</H3>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table7">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT DISTINCT column_name(s)
+FROM table_name</PRE></TD></TR></TBODY></TABLE><BR>
+            <HR>
+
+            <H2>Using the DISTINCT keyword</H2>
+            <P>To select ALL values from the column named "Company" we use a 
+            SELECT statement like this:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table8">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT Company FROM Orders</PRE></TD></TR></TBODY></TABLE>
+            <P><B>"Orders" table</B></P>
+            <TABLE class=ex cellSpacing=0 width="50%" border=1 id="table9">
+              <TBODY>
+              <TR>
+                <TH align=left>Company</TH>
+                <TH align=left>OrderNumber</TH></TR>
+              <TR>
+                <TD>Sega</TD>
+                <TD>3412</TD></TR>
+              <TR>
+                <TD>W3Schools</TD>
+                <TD>2312</TD></TR>
+              <TR>
+                <TD>Trio</TD>
+                <TD>4678</TD></TR>
+              <TR>
+                <TD>W3Schools</TD>
+                <TD>6798</TD></TR></TBODY></TABLE>
+            <P><B>Result</B></P>
+            <TABLE class=ex cellSpacing=0 width="50%" border=1 id="table10">
+              <TBODY>
+              <TR>
+                <TH align=left>Company</TH></TR>
+              <TR>
+                <TD>Sega</TD></TR>
+              <TR>
+                <TD>W3Schools</TD></TR>
+              <TR>
+                <TD>Trio</TD></TR>
+              <TR>
+                <TD>W3Schools</TD></TR></TBODY></TABLE>
+            <P>Note that "W3Schools" is listed twice in the result-set.</P>
+            <P>To select only DIFFERENT values from the column named "Company" 
+            we use a SELECT DISTINCT statement like this:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table11">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT DISTINCT Company FROM Orders</PRE></TD></TR></TBODY></TABLE>
+            <P><B>Result:</B></P>
+            <TABLE class=ex cellSpacing=0 width="50%" border=1 id="table12">
+              <TBODY>
+              <TR>
+                <TH align=left>Company</TH></TR>
+              <TR>
+                <TD>Sega</TD></TR>
+              <TR>
+                <TD>W3Schools</TD></TR>
+              <TR>
+                <TD>Trio</TD></TR></TBODY></TABLE>
+            <P>Now "W3Schools" is listed only once in the result-set.</P>
+            <HR>
+            <a href="SQL_Intro.htm"><IMG height=20 
+            alt=previous src="Images/btn_previous.gif" 
+            width=100 border=0></a> <a href="SQL_Where.htm"><IMG height=20 
+            alt=next src="Images/btn_next.gif" width=100 
+            border=0></a>
+            <HR>
+
+            </TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top align=middle width=145>
+      &nbsp;</TD></TR></TBODY></TABLE></BODY></HTML>

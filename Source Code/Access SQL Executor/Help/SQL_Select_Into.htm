@@ -1,0 +1,101 @@
+<HTML><HEAD><TITLE>SQL Introduction</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<LINK 
+href="Images/stdtheme.css" type=text/css rel=stylesheet>
+
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#808080>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=234><A href="http://www.w3schools.com/"><IMG 
+      alt=W3Schools src="Images/w3default80.jpg" border=0></A> </TD>
+    <TH class=right vAlign=center width=470>
+      <CENTER><BR></CENTER></TH>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=3 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=content vAlign=top width=137><BR><B>SQL Basic</B> <BR>
+	<a class="left" style="color: #000000; background-color: transparent" target="_top" href="SQL_Intro.htm">SQL 
+      Intro</a><BR><a class="left" target="_top" href="SQL_Select.htm">SQL 
+      SELECT</a><BR><a class="left" target="_top" href="SQL_Where.htm">SQL 
+      WHERE</a><BR><a class="left" target="_top" href="SQL_Insert.htm">SQL 
+      INSERT</a><BR><a class="left" target="_top" href="SQL_Update.htm">SQL 
+      UPDATE</a><BR><a class="left" target="_top" href="SQL_Delete.htm">SQL 
+      DELETE</a><BR>
+	<b>
+	<a class="left" target="_top" href="SQL_Select_Into.htm">SQL 
+      SELECT INTO</a></b><BR><BR>&nbsp;</TD>
+    <TD vAlign=top width=490>
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" bgColor=#ffffff 
+        border=1><TBODY>
+        <TR>
+          <TD>
+            <H1>SQL The SELECT INTO Statement </H1><a href="SQL_Delete.htm"><IMG height=20 
+            alt=previous src="Images/btn_previous.gif" width=100 
+            border=0></a>&nbsp; 
+            <HR>
+
+            <H2>The SELECT INTO Statement</H2>
+            <P>The SELECT INTO statement is most often used to create backup 
+            copies of tables or for archiving records.</P>
+            <H3>Syntax</H3>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table1">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT column_name(s) INTO newtable [IN externaldatabase] 
+FROM source</PRE></TD></TR></TBODY></TABLE><BR>
+            <HR>
+
+            <H2>Make a Backup Copy</H2>
+            <P>The following example makes a backup copy of the "Persons" 
+            table:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table2">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT * INTO Persons_backup
+FROM Persons</PRE></TD></TR></TBODY></TABLE>
+            <P>The IN clause can be used to copy tables into another 
+            database:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table3">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT Persons.* INTO Persons IN 'Backup.mdb'
+FROM Persons</PRE></TD></TR></TBODY></TABLE>
+            <P>If you only want to copy a few fields, you can do so by listing 
+            them after the SELECT statement:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table4">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT LastName,FirstName INTO Persons_backup
+FROM Persons</PRE></TD></TR></TBODY></TABLE>
+            <P>You can also add a where clause. The following example creates a 
+            "Persons_backup" table with two columns (FirstName and LastName) by 
+            extracting the persons who lives in "Sandnes" from the "Persons" 
+            table:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table5">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT LastName,Firstname INTO Persons_sandnes
+FROM Persons
+WHERE City='Sandnes'</PRE></TD></TR></TBODY></TABLE>
+            <P>Selecting data from more than one table is also possible. The 
+            following example creates a new table "Empl_Ord_backup" that 
+            contains data from the two tables Employees and Orders:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table6">
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT Employees.Name,Orders.Product
+INTO Empl_Ord_backup
+FROM Employees
+INNER JOIN Orders
+ON Employees.Employee_ID=Orders.Employee_ID</PRE></TD></TR></TBODY></TABLE>
+            <HR>
+            <a href="SQL_Delete.htm"><IMG height=20 
+            alt=previous src="Images/btn_previous.gif" 
+            width=100 border=0></a>&nbsp;
+            <HR>
+
+            </TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top align=middle width=145>
+      &nbsp;</TD></TR></TBODY></TABLE></BODY></HTML>

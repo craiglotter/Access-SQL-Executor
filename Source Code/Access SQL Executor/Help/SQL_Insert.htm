@@ -1,0 +1,155 @@
+<HTML><HEAD><TITLE>SQL Introduction</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<LINK 
+href="Images/stdtheme.css" type=text/css rel=stylesheet>
+
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#808080>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=234><A href="http://www.w3schools.com/"><IMG 
+      alt=W3Schools src="Images/w3default80.jpg" border=0></A> </TD>
+    <TH class=right vAlign=center width=470>
+      <CENTER><BR></CENTER></TH>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=3 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=content vAlign=top width=137><BR><B>SQL Basic</B> <BR>
+	<a class="left" style="color: #000000; background-color: transparent" target="_top" href="SQL_Intro.htm">SQL 
+      Intro</a><BR><a class="left" target="_top" href="SQL_Select.htm">SQL 
+      SELECT</a><BR><a class="left" target="_top" href="SQL_Where.htm">SQL 
+      WHERE</a><BR><b><a class="left" target="_top" href="SQL_Insert.htm">SQL 
+      INSERT</a></b><BR><a class="left" target="_top" href="SQL_Update.htm">SQL 
+      UPDATE</a><BR><a class="left" target="_top" href="SQL_Delete.htm">SQL 
+      DELETE</a><BR>
+	<a class="left" target="_top" href="SQL_Select_Into.htm">SQL 
+      SELECT INTO</a><BR><BR>&nbsp;</TD>
+    <TD vAlign=top width=490>
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" bgColor=#ffffff 
+        border=1><TBODY>
+        <TR>
+          <TD>
+            <H1>SQL The INSERT INTO Statement </H1><a href="SQL_Where.htm"><IMG height=20 
+            alt=previous src="Images/btn_previous.gif" width=100 
+            border=0></a> <a href="SQL_Update.htm"><IMG height=20 
+            alt=next src="Images/btn_next.gif" width=100 border=0></a> 
+            <HR>
+
+            <H2>The INSERT INTO Statement</H2>
+            <P>The INSERT INTO statement is used to insert new rows into a 
+            table.</P>
+            <H3>Syntax</H3>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table1">
+              <TBODY>
+              <TR>
+                <TD><PRE>INSERT INTO table_name<I>
+</I>VALUES (value1, value2,....)</PRE></TD></TR></TBODY></TABLE>
+            <P>You can also specify the columns for which you want to insert 
+            data:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table2">
+              <TBODY>
+              <TR>
+                <TD><PRE>INSERT INTO table_name (column1, column2,...)
+VALUES (value1, value2,....)</PRE></TD></TR></TBODY></TABLE><BR>
+            <HR>
+
+            <H2>Insert a New Row</H2>
+            <P>This "Persons" table:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table3">
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH>
+                <TH align=left>Address</TH>
+                <TH align=left>City</TH></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD>
+                <TD>Storgt 20</TD>
+                <TD>Stavanger</TD></TR></TBODY></TABLE>
+            <P>And this SQL statement:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table4">
+              <TBODY>
+              <TR>
+                <TD><PRE>INSERT INTO Persons&nbsp;
+VALUES ('Hetland', 'Camilla', 'Hagabakka 24', 'Sandnes')</PRE></TD></TR></TBODY></TABLE>
+            <P>Will give this result:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table5">
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH>
+                <TH align=left>Address</TH>
+                <TH align=left>City</TH></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD>
+                <TD>Storgt 20</TD>
+                <TD>Stavanger</TD></TR>
+              <TR>
+                <TD>Hetland</TD>
+                <TD>Camilla</TD>
+                <TD>Hagabakka 24</TD>
+                <TD>Sandnes</TD></TR></TBODY></TABLE><BR>
+            <HR>
+
+            <H2>Insert Data in Specified Columns</H2>
+            <P>This "Persons" table:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table6">
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH>
+                <TH align=left>Address</TH>
+                <TH align=left>City</TH></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD>
+                <TD>Storgt 20</TD>
+                <TD>Stavanger</TD></TR>
+              <TR>
+                <TD>Hetland</TD>
+                <TD>Camilla</TD>
+                <TD>Hagabakka 24</TD>
+                <TD>Sandnes</TD></TR></TBODY></TABLE>
+            <P>And This SQL statement:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table7">
+              <TBODY>
+              <TR>
+                <TD><PRE>INSERT INTO Persons (LastName, Address)
+VALUES ('Rasmussen', 'Storgt 67')</PRE></TD></TR></TBODY></TABLE>
+            <P>Will give this result:</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1 id="table8">
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH>
+                <TH align=left>Address</TH>
+                <TH align=left>City</TH></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD>
+                <TD>Storgt 20</TD>
+                <TD>Stavanger</TD></TR>
+              <TR>
+                <TD>Hetland</TD>
+                <TD>Camilla</TD>
+                <TD>Hagabakka 24</TD>
+                <TD>Sandnes</TD></TR>
+              <TR>
+                <TD>Rasmussen</TD>
+                <TD>&nbsp;</TD>
+                <TD>Storgt 67</TD>
+                <TD>&nbsp;</TD></TR></TBODY></TABLE>
+            <HR>
+            <a href="SQL_Where.htm"><IMG height=20 
+            alt=previous src="Images/btn_previous.gif" 
+            width=100 border=0></a> <a href="SQL_Update.htm"><IMG height=20 
+            alt=next src="Images/btn_next.gif" width=100 
+            border=0></a>
+            <HR>
+
+            </TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top align=middle width=145>
+      &nbsp;</TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,157 @@
+<HTML><HEAD><TITLE>SQL Introduction</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<LINK 
+href="Images/stdtheme.css" type=text/css rel=stylesheet>
+
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#808080>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=234><A href="http://www.w3schools.com/"><IMG 
+      alt=W3Schools src="Images/w3default80.jpg" border=0></A> </TD>
+    <TH class=right vAlign=center width=470>
+      <CENTER><BR></CENTER></TH>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=3 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=content vAlign=top width=137><BR><B>SQL Basic</B> <BR>
+	<a class="left" style="FONT-WEIGHT: bold; COLOR: #000000; BACKGROUND-COLOR: transparent" target="_top" href="SQL_Intro.htm">SQL 
+      Intro</a><BR><a class="left" target="_top" href="SQL_Select.htm">SQL 
+      SELECT</a><BR><a class="left" target="_top" href="SQL_Where.htm">SQL 
+      WHERE</a><BR><a class="left" target="_top" href="SQL_Insert.htm">SQL 
+      INSERT</a><BR><a class="left" target="_top" href="SQL_Update.htm">SQL 
+      UPDATE</a><BR><a class="left" target="_top" href="SQL_Delete.htm">SQL 
+      DELETE</a><BR>
+	<a class="left" target="_top" href="SQL_Select_Into.htm">SQL 
+      SELECT INTO</a><BR><BR>&nbsp;</TD>
+    <TD vAlign=top width=490>
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" bgColor=#ffffff 
+        border=1><TBODY>
+        <TR>
+          <TD>
+            <H1>Introduction to SQL</H1>&nbsp;<a href="SQL_Select.htm"><IMG height=20 
+            alt=next src="Images/btn_next.gif" width=100 border=0></a> 
+            <HR>
+
+            <P class=intro>SQL is a standard computer language for accessing and 
+            manipulating databases.</P>
+            <HR>
+
+            <H2>What is SQL?</H2>
+            <UL>
+              <LI>SQL stands for <B>S</B>tructured <B>Q</B>uery <B>L</B>anguage 
+              <LI>SQL allows you to access a database 
+              <LI>SQL is an ANSI standard computer language 
+              <LI>SQL can execute queries against a database 
+              <LI>SQL can retrieve data from a database 
+              <LI>SQL can insert new records in a database 
+              <LI>SQL can delete records from a database 
+              <LI>SQL can update records in a database 
+              <LI>SQL is easy to learn </LI></UL>
+            <HR>
+
+            <H2>SQL is a Standard - BUT....</H2>
+            <P>SQL is an ANSI (American National Standards Institute) standard 
+            computer language for accessing and manipulating database systems. 
+            SQL statements are used to retrieve and update data in a database. 
+            SQL works with database programs like MS Access, DB2, Informix, MS 
+            SQL Server, Oracle, Sybase, etc.</P>
+            <P>Unfortunately, there are many different versions of the SQL 
+            language, but to be in compliance with the ANSI standard, they must 
+            support the same major keywords in a similar manner (such as SELECT, 
+            UPDATE, DELETE, INSERT, WHERE, and others).</P>
+            <P><B>Note:</B> Most of the SQL database programs also have their 
+            own proprietary extensions in addition to the SQL standard!</P>
+            <HR>
+
+            <H2>SQL Database Tables</H2>
+            <P>A database most often contains one or more tables. Each table is 
+            identified by a name (e.g. "Customers" or "Orders"). Tables contain 
+            records (rows) with data.</P>
+            <P>Below is an example of&nbsp;a table called "Persons":</P>
+            <TABLE class=ex cellSpacing=0 width="100%" border=1>
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH>
+                <TH align=left>FirstName</TH>
+                <TH align=left>Address</TH>
+                <TH align=left>City</TH></TR>
+              <TR>
+                <TD>Hansen</TD>
+                <TD>Ola</TD>
+                <TD>Timoteivn 10</TD>
+                <TD>Sandnes</TD></TR>
+              <TR>
+                <TD>Svendson</TD>
+                <TD>Tove</TD>
+                <TD>Borgvn 23</TD>
+                <TD>Sandnes</TD></TR>
+              <TR>
+                <TD>Pettersen</TD>
+                <TD>Kari</TD>
+                <TD>Storgt 20</TD>
+                <TD>Stavanger</TD></TR></TBODY></TABLE>
+            <P>The table above contains three records (one for each person) and 
+            four columns (LastName, FirstName, Address, and City).</P>
+            <HR>
+
+            <H2>SQL Queries </H2>
+            <P>With SQL, we can query a database and have a result set returned. 
+            </P>
+            <P>A query like this: </P>
+            <TABLE class=ex cellSpacing=0 width="50%" border=1>
+              <TBODY>
+              <TR>
+                <TD><PRE>SELECT LastName FROM Persons</PRE></TD></TR></TBODY></TABLE>
+            <P>Gives a result set like this: </P>
+            <TABLE class=ex cellSpacing=0 width="50%" border=1>
+              <TBODY>
+              <TR>
+                <TH align=left>LastName</TH></TR>
+              <TR>
+                <TD>Hansen</TD></TR>
+              <TR>
+                <TD>Svendson</TD></TR>
+              <TR>
+                <TD>Pettersen</TD></TR></TBODY></TABLE>
+            <P><B>Note</B>: Some database systems require a semicolon at the end 
+            of the SQL statement. We don't use the semicolon in our 
+            tutorials.</P>
+            <HR>
+
+            <H2>SQL Data Manipulation Language (DML)</H2>
+            <P>SQL (Structured Query Language) is a syntax for executing 
+            queries. But the SQL language also includes a syntax to update, 
+            insert, and delete records.</P>
+            <P>These query and update commands together form the Data 
+            Manipulation Language (DML) part of SQL:</P>
+            <UL type=square>
+              <LI><B>SELECT</B> - extracts data from a database table 
+              <LI><B>UPDATE</B> - updates data in a database table 
+              <LI><B>DELETE</B> - deletes data from a database table 
+              <LI><B>INSERT INTO</B> - inserts new data into a database table 
+              </LI></UL>
+            <HR>
+
+            <H2>SQL Data Definition Language (DDL)</H2>
+            <P>The Data Definition Language (DDL) part of SQL permits database 
+            tables to be created or deleted. We can also define indexes (keys), 
+            specify links between tables, and impose constraints between 
+            database tables.</P>
+            <P>The most important DDL statements in SQL are:&nbsp;</P>
+            <UL type=square>
+              <LI><B>CREATE TABLE</B> - creates a new database table 
+              <LI><B>ALTER TABLE </B>- alters (changes) a database table 
+              <LI><B>DROP TABLE</B> - deletes a database table 
+              <LI><B>CREATE INDEX</B> - creates an index (search key) 
+              <LI><B>DROP INDEX</B>&nbsp;- deletes an index </LI></UL>
+            <HR>
+            &nbsp;<a href="SQL_Select.htm"><IMG height=20 
+            alt=next src="Images/btn_next.gif" width=100 border=0></a> 
+            <BR>
+            <HR>
+
+            </TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top align=middle width=145>
+      &nbsp;</TD></TR></TBODY></TABLE></BODY></HTML>
